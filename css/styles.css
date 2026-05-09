@@ -514,3 +514,12 @@ code {
   object-fit: cover;
   object-position: bottom center;
 }
+
+.contact {
+}
+
+.social-links img {
+  width: 35px;
+  padding: 5px;
+
+}
