@@ -283,10 +283,10 @@ h3 {
   line-height: 1.65;
 }
 
-.vote {
-  display: none;
-  visibility: hidden;
-}
+/*.vote {*/
+/*  display: none;*/
+/*  visibility: hidden;*/
+/*}*/
 
 .split {
   display: grid;
