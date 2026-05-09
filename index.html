@@ -11,36 +11,42 @@
   <link rel="shortcut icon" href="favicon.svg" type="image/svg">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="#top" class="logo">RHUL Climbing</a>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <div class="nav-links">
-        <a href="#vision">Vision</a>
-        <a href="#manifesto">Manifesto</a>
-        <a href="#why-me">Why me?</a>
-        <a class="vote" href="#vote">Vote</a>
+<header class="site-header">
+  <nav class="nav">
+    <a href="#top" class="logo">RHUL Climbing</a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="#vision">Vision</a>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#why-me">Why me?</a>
+      <a class="vote" href="#vote">Vote</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">RHUL Climbing Society Election</p>
+      <h1>Vote <span>Blyth Middleton</span> for Climbing SU President</h1>
+      <p class="hero-text">
+        Building a stronger, safer, more welcoming climbing community at Royal Holloway -
+        from first-time boulderers to experienced trad climbers.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#manifesto" class="button primary">Read my manifesto</a>
+        <a href="#vote" class="button secondary vote">Voting info</a>
       </div>
-    </nav>
-  </header>
+    </div>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">RHUL Climbing Society Election</p>
-        <h1>Vote <span>Blyth Middleton</span> for Climbing SU President</h1>
-        <p class="hero-text">
-          Building a stronger, safer, more welcoming climbing community at Royal Holloway -
-          from first-time boulderers to experienced trad climbers.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#manifesto" class="button primary">Read my manifesto</a>
-          <a href="#vote" class="button secondary vote">Voting info</a>
-        </div>
-      </div>
-
-      <div class="hero-card" aria-label="Campaign highlights">
+    <div class="hero-media" aria-label="Blyth in the mountains">
+      <img
+        src="img/IMG-20250825-WA0039.jpg"
+        alt="Blyth sitting in front of a mountain landscape"
+        class="hero-photo"
+      />
+      <div class="hero-card hero-card-floating" aria-label="Campaign highlights">
         <div class="card-stat">
           <strong>Inclusive</strong>
           <span>Make our society more welcoming for anyone to join.</span>
@@ -51,132 +57,149 @@
         </div>
         <div class="card-stat">
           <strong>Safe</strong>
-          <span>Re-work procedure for training to both promote safety while allowing committee to
-            still have a chance to climb.</span>
+          <span>Re-work training to promote safety while still giving committee time to climb.</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="vision" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">My vision</p>
-        <h2>A society where everyone feels ready to climb higher.</h2>
-      </div>
-      <p class="lead">
-        I want out society to be more than just weekly sessions. I want it to be a society where
-        we can make friends, improve skill and feel included.
-      </p>
-    </section>
+  <section id="vision" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">My vision</p>
+      <h2>A society where everyone feels ready to climb higher.</h2>
+    </div>
+    <p class="lead">
+      I want our society to be more than just weekly sessions. I want it to be a society where
+      we can make friends, improve skill and feel included.
+    </p>
+  </section>
 
-    <section id="manifesto" class="section manifesto-grid">
-      <article class="manifesto-card">
+  <section class="section photo-feature" aria-label="Campaign climbing photos">
+    <figure class="feature-image feature-image-large">
+      <img
+        src="img/IMG-20260325-WA0040.jpg"
+        alt="Blyth climbing on an indoor bouldering wall"
+      />
+      <figcaption>Experience on the wall, not just promises on a page.</figcaption>
+    </figure>
+    <figure class="feature-image feature-image-wide">
+      <img
+        src="img/20240512_195455.jpg"
+        alt="Blyth making a dynamic move on a competition-style boulder problem"
+      />
+      <figcaption>More energy, more variety, more reasons to turn up.</figcaption>
+    </figure>
+  </section>
 
-        <span class="number">01</span>
-        <h3>Remove spam in the group chat</h3>
-        <p>
-          I will create my own AI powered moderation bot that will scan messages from new members
-          of the group-chat to verify they are not a spammer.
-        </p>
-        <p>
-          For privacy the bot will be run either locally or via an api to a paid for service which
-          doesn't use the messages for training.
-        </p>
-        <p class="smaller-note">
-          Will most likely be local, just depends whether I can make sure it's uptime is consistent.
-        </p>
-      </article>
+  <section id="manifesto" class="section manifesto-grid">
+    <article class="manifesto-card">
 
-      <article class="manifesto-card">
-        <span class="number">02</span>
-        <h3>More <b>GOATED</b> trips, socials and events</h3>
-        <p>
-          More <b>GOATED</b> socials, trips and events including internal competitions as well
-          as trying some inter-soc and possibly inter-uni events.
-        </p>
-        <p>
-          <b>GOATED</b> trips would include going to new climbing walls more often to introduce
-          variety and help us climb up the v grades.
-        </p>
-      </article>
-
-      <article class="manifesto-card">
-        <span class="number">03</span>
-        <h3>Training to prepare for competitions</h3>
-        <p>
-          Run training sessions to help us climb the ranks in competitions.
-        </p>
-      </article>
-
-      <article class="manifesto-card">
-        <span class="number">04</span>
-        <h3>Run extra sessions on weekends</h3>
-        <p>
-          Run extra bouldering sessions on weekends for only signed off members to allow
-        </p>
-      </article>
-
-      <article class="manifesto-card">
-        <span class="number">05</span>
-        <h3>Build on the community</h3>
-        <p>
-          Build an inclusive community where everyone feels welcome and introduce fun traditions.
-        </p>
-      </article>
-
-      <article class="manifesto-card">
-        <span class="number">06</span>
-        <h3>Better communication</h3>
-        <p>
-          Revive the Discord server to live along-side the WhatsApp chat to make it easier for
-          members to stay up to date with announcements.
-        </p>
-      </article>
-
-      <article class="manifesto-card">
-        <span class="number">07</span>
-        <h3>Inclusive atmosphere</h3>
-        <p>
-          Make it easier for members to suggest ideas and help shape the direction of the society.
-          Keep
-        </p>
-      </article>
-    </section>
-
-    <section id="why-me" class="section split">
-      <div>
-        <p class="eyebrow">Why me?</p>
-        <h2>I care about making climbing accessible, social, and exciting.</h2>
-      </div>
-      <div class="text-panel">
-        <p>
-          As someone who's been climbing for 10 years, I believe climbing should be welcoming and
-          welcoming to everyone.  My aim is to help us grow while keeping the welcoming
-          spirit that makes the society special.
-        </p>
-      </div>
-    </section>
-
-    <section id="vote" class="vote-section vote">
-      <p class="eyebrow">Voting</p>
-      <h2>Ready to vote?</h2>
+      <span class="number">01</span>
+      <h3>Remove spam in the group chat</h3>
       <p>
-        Once elections open you can go to the SU website to vote for me, or click on the button
-        below to take you there.
+        I will create my own AI powered moderation bot that will scan messages from new members
+        of the group-chat to verify they are not a spammer.
       </p>
+      <p>
+        For privacy the bot will be run either locally or via an api to a paid for service which
+        doesn't use the messages for training.
+      </p>
+      <p class="smaller-note">
+        Will most likely be local, just depends whether I can make sure it's uptime is consistent.
+      </p>
+    </article>
 
-      <button id="voteButton" class="button vote-button" disabled>
-        Voting link coming soon
-      </button>
+    <article class="manifesto-card">
+      <span class="number">02</span>
+      <h3>More <b>GOATED</b> trips, socials and events</h3>
+      <p>
+        More <b>GOATED</b> socials, trips and events including internal competitions as well
+        as trying some inter-soc and possibly inter-uni events.
+      </p>
+      <p>
+        <b>GOATED</b> trips would include going to new climbing walls more often to introduce
+        variety and help us climb up the v grades.
+      </p>
+    </article>
 
-      <p class="small-note"></p>
-    </section>
-  </main>
+    <article class="manifesto-card">
+      <span class="number">03</span>
+      <h3>Training to prepare for competitions</h3>
+      <p>
+        Run training sessions to help us climb the ranks in competitions.
+      </p>
+    </article>
 
-  <footer class="footer">
-    <p>Blyth for RHUL climbing soc president!</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+    <article class="manifesto-card">
+      <span class="number">04</span>
+      <h3>Run extra sessions on weekends</h3>
+      <p>
+        Run extra bouldering sessions on weekends for signed-off members, giving people more chances to climb and train around their timetable.
+      </p>
+    </article>
 
-  <script src="js/app.js"></script>
+    <article class="manifesto-card">
+      <span class="number">05</span>
+      <h3>Build on the community</h3>
+      <p>
+        Build an inclusive community where everyone feels welcome and introduce fun traditions.
+      </p>
+    </article>
+
+    <article class="manifesto-card">
+      <span class="number">06</span>
+      <h3>Better communication</h3>
+      <p>
+        Revive the Discord server to live along-side the WhatsApp chat to make it easier for
+        members to stay up to date with announcements.
+      </p>
+    </article>
+
+    <article class="manifesto-card">
+      <span class="number">07</span>
+      <h3>Inclusive atmosphere</h3>
+      <p>
+        Make it easier for members to suggest ideas, give feedback, and help shape the direction of the society throughout the year.
+      </p>
+    </article>
+  </section>
+
+  <section id="why-me" class="section split">
+    <div>
+      <p class="eyebrow">Why me?</p>
+      <h2>I care about making climbing accessible, social, and exciting.</h2>
+    </div>
+    <div class="text-panel">
+      <p>
+        As someone who's been climbing for 10 years, I believe climbing should be accessible and
+        welcoming to everyone.  My aim is to help us grow while keeping the welcoming
+        spirit that makes the society special.
+      </p>
+    </div>
+  </section>
+
+  <section id="vote" class="vote-section vote">
+    <p class="eyebrow">Voting</p>
+    <h2>Ready to vote?</h2>
+    <p>
+      Once elections open you can go to the SU website to vote for me, or click on the button
+      below to take you there.
+    </p>
+
+    <button id="voteButton" class="button vote-button" disabled>
+      Voting link coming soon
+    </button>
+
+    <p class="small-note"></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Blyth for RHUL climbing soc president!</p>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<script src="js/app.js"></script>
 </body>
 </html>
+

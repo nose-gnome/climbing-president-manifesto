@@ -12,7 +12,7 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 });
 
 const revealItems = document.querySelectorAll(
-  ".section, .manifesto-card, .hero-card, .vote-section"
+  ".section, .manifesto-card, .hero-card, .vote-section, .hero-media, .feature-image"
 );
 
 revealItems.forEach((item) => item.classList.add("reveal"));
