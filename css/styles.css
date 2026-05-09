@@ -332,6 +332,11 @@ h3 {
   font-size: 0.9rem;
 }
 
+.smaller-note {
+  margin-top: 16px;
+  font-size: 0.7rem;
+}
+
 code {
   background: rgba(255, 255, 255, 0.1);
   padding: 0.15rem 0.35rem;
