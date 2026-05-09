@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vote Blyth Middleton | RHUL Climbing President</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --background: #0b1020;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.14);
+  --text: #f7f7fb;
+  --muted: #b8bfd6;
+  --accent: #7dd3fc;
+  --accent-strong: #38bdf8;
+  --warm: #fbbf24;
+  --border: rgba(255, 255, 255, 0.16);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.26), transparent 34rem),
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.16), transparent 28rem),
+    linear-gradient(135deg, #080b16 0%, #11172c 55%, #0b1020 100%);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(18px);
+  background: rgba(8, 11, 22, 0.72);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+}
+
+main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 40px;
+  align-items: start;
+  padding: 36px 0 80px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  font-size: clamp(3rem, 8vw, 6.7rem);
+  line-height: 0.92;
+  letter-spacing: -0.08em;
+  margin-bottom: 24px;
+}
+
+h1 span {
+  color: var(--warm);
+}
+
+
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.hero-text,
+.lead {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--text);
+  color: #0b1020;
+}
+
+.secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.hero-card {
+  position: relative;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+    var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(125, 211, 252, 0.22);
+  border-radius: 50%;
+  top: -80px;
+  right: -80px;
+  filter: blur(4px);
+}
+
+.card-stat {
+  position: relative;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-stat:last-child {
+  border-bottom: 0;
+}
+
+.card-stat strong {
+  display: block;
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+  margin-bottom: 6px;
+}
+
+.card-stat span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.section-heading {
+  max-width: 780px;
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.manifesto-card,
+.text-panel,
+.vote-section {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.manifesto-card {
+  padding: 28px;
+  min-height: 250px;
+}
+
+.number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 28px;
+  border-radius: 14px;
+  background: var(--surface-strong);
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.manifesto-card p,
+.text-panel p,
+.vote-section p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.vote {
+  display: none;
+  visibility: hidden;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.text-panel {
+  padding: 32px;
+}
+
+.vote-section {
+  margin: 64px 0 96px;
+  padding: 56px 32px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(125, 211, 252, 0.18), transparent 24rem),
+    var(--surface);
+}
+
+.vote-section p {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vote-button {
+  margin-top: 22px;
+  background: var(--accent-strong);
+  color: #07101c;
+  border: 0;
+}
+
+.vote-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  filter: grayscale(0.35);
+}
+
+.small-note {
+  margin-top: 18px;
+  font-size: 0.9rem;
+}
+
+.smaller-note {
+  margin-top: 16px;
+  font-size: 0.7rem;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.35rem;
+  color: var(--text);
+}
+
+.footer {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer a {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 860px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: rgba(8, 11, 22, 0.96);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 64px 0 40px;
+  }
+
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+
+/* Campaign photography */
+.hero-media {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card-floating {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  backdrop-filter: blur(18px);
+}
+
+.photo-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 18px;
+  align-items: stretch;
+  padding-top: 28px;
+}
+
+.feature-image {
+  position: relative;
+  min-height: 430px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+.feature-image-large img {
+  object-position: 50% 45%;
+}
+
+.feature-image-wide img {
+  object-position: 45% 45%;
+}
+
+.feature-image figcaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(8, 11, 22, 0.72);
+  backdrop-filter: blur(14px);
+  color: var(--text);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+@media (max-width: 860px) {
+  .hero-photo {
+    height: min(92vw, 640px);
+  }
+
+  .photo-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 360px;
+  }
+}
+
+.hero-photo {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: bottom center;
+}
+
+.contact {
+}
+
+.social-links img {
+  width: 10%;
+  padding: 5px;
+
+}
+
+
+
+/* Single-file, no-JavaScript adjustments */
+.menu-toggle,
+.vote {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.reveal,
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    min-height: auto;
+    padding: 18px 0;
+    align-items: flex-start;
+    gap: 14px;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+}
+
+</style></head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="logo" href="#top">RHUL Climbing</a>
+
+<div class="nav-links">
+<a href="#vision">Vision</a>
+<a href="#manifesto">Manifesto</a>
+<a href="#why-me">Why me?</a>
+<a class="vote" href="#vote">Vote</a>
+</div>
+</nav>
+</header>
+<main id="top">
+<section class="hero">
+<div class="hero-content">
+<p class="eyebrow">RHUL Climbing Society Election</p>
+<h1>Vote <span>Blyth Middleton</span> for Climbing President!</h1>
+<p class="hero-text">
+        Building a stronger, safer, more welcoming climbing community at
+        Royal Holloway - from first-time boulderers to experienced trad climbers.
+      </p>
+<div class="hero-actions">
+<a class="button primary" href="#manifesto">Read my manifesto</a>
+
+<a class="button secondary vote" href="#vote">Voting info</a>
+</div>
+</div>
+<div aria-label="Blyth in the mountains" class="hero-media">
+<img alt="Blyth sitting in front of a mountain landscape" class="hero-photo" src="https://vote.blyth.middleton.uk.net/img/20250814_112400.png"/>
+<div aria-label="Campaign highlights" class="hero-card hero-card-floating">
+<div class="card-stat">
+<strong>End the spam in the groupchat</strong>
+<span>Rid the chats of spammers.</span>
+</div>
+<div class="card-stat">
+<strong>GOATED sessions 🐐</strong>
+<span>More <b>GOATED</b> socials, trips, and competitions</span>
+</div>
+<div class="card-stat">
+<strong>Training</strong>
+<span>Run training sessions to help you improve and more frequent internal comps.</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="vision">
+<div class="section-heading">
+<p class="eyebrow">My vision</p>
+<h2>A society where everyone feels ready to climb higher.</h2>
+</div>
+<p class="lead">
+      As a keen climber of ten years experience, I want our society to be more than just weekly
+      sessions. I want it to be a society where we can make friends, improve skill and feel included.
+    </p>
+</section>
+<section aria-label="Campaign climbing photos" class="section photo-feature">
+<figure class="feature-image feature-image-large">
+<img alt="Blyth climbing on an indoor bouldering wall at varsity competitions" src="https://vote.blyth.middleton.uk.net/img/IMG-20260325-WA0040.jpg"/>
+</figure>
+<figure class="feature-image feature-image-wide">
+<img alt="Blyth making a dynamic move on a competition-style boulder problem" src="https://vote.blyth.middleton.uk.net/img/20240512_195455.jpg"/>
+</figure>
+</section>
+<section class="section manifesto-grid" id="manifesto">
+<article class="manifesto-card">
+<span class="number">01</span>
+<h3>More <b>GOATED</b> trips, socials and events</h3>
+<p>
+        More <b>GOATED</b> socials, trips and events including internal competitions as well
+        as trying some inter-soc and possibly inter-uni events.
+      </p>
+<p>
+<b>GOATED</b> trips would include going to new climbing walls more often like Vauxwall,
+        WhiteSpider and WestWay to name a few; to introduce variety and help us climb up the v grades.
+      </p>
+<p>
+        Some more activities could include parties, games nights, and possibly some non-climbing
+        related outings - as well as any other activities we as a community vote for.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">02</span>
+<h3>Remove spam in the group chat</h3>
+<p>
+        I will create my own AI powered moderation bot that will scan messages from new members
+        of the group-chat to verify they are not a spammer.
+      </p>
+<p>
+        For privacy the bot will be run either locally or via an api to a paid for service which
+        doesn't use the messages for training.
+      </p>
+<p class="smaller-note">
+        Will most likely be local, just depends on whether I can make sure its uptime is consistent.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">03</span>
+<h3>Training to prepare for competitions</h3>
+<p>
+        Run training sessions to help us climb the ranks in competitions.
+      </p>
+<p>
+        I will get training qualifications over the summer holiday to
+        allow me to provide the group with training sessions. I will look to see if it would be
+        financially feasible to hire someone outside the club to help our more experienced climbers
+        excel.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">04</span>
+<h3>Welcome new members</h3>
+<p>
+        Have beginner targeted sessions with more leaflets around campus to advertise.
+      </p>
+<p>
+        Also introduce termly membership to make the group accessible to people want to join later
+        in the year.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">05</span>
+<h3>Run extra sessions on weekends</h3>
+<p>
+        Run extra bouldering sessions on weekends for signed-off members, giving people more chances
+        to climb and train around their timetable.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">06</span>
+<h3>Build on the community</h3>
+<p>
+        Build an inclusive community where everyone feels welcome and introduce fun traditions, which
+        we as a community can come up with using a poll.
+      </p>
+<p>
+        Make the society more community led with polls to help decide on activities and future events.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">07</span>
+<h3>Better communication</h3>
+<p>
+        Revive the Discord server and try to have it live along-side the WhatsApp chat to make it
+        easier for members to stay up to date with announcements.
+      </p>
+<p>
+</p>
+<p>
+        Events will also be timetabled and posted on our social medias to keep people in the loop.
+      </p>
+<p>
+        Will also look into setting up a texting system to notify people of important events and
+        updates to our timetable if they sign up for it.
+      </p>
+</article>
+<article class="manifesto-card">
+<span class="number">08</span>
+<h3>Try to increase funding</h3>
+<p>
+        I will try to increase funding by organising fund-raising events like bake sales, quiz
+        nights, and I will try to lobby the uni for more funding to allow for more training sessions.
+      </p>
+</article>
+</section>
+<section class="section split" id="why-me">
+<div>
+<p class="eyebrow">Why me?</p>
+<h2>I care about making climbing accessible, social, and exciting.</h2>
+</div>
+<div class="text-panel">
+<p>
+        As someone who's been climbing for 10 years, I believe climbing should be accessible and
+        welcoming to everyone.  My aim is to help our society grow while having a better quality
+        of climbing session.
+      </p>
+<p>
+        So, if you want a <b>GOATED</b> climbing experience you know who to vote for!
+      </p>
+</div>
+</section>
+<section class="vote-section vote" id="vote">
+<p class="eyebrow">Voting</p>
+<h2>Ready to vote?</h2>
+<p>
+      Once elections open you can go to the SU website to vote for me, or click on the button
+      below to take you there.
+    </p>
+<button class="button vote-button" disabled="" id="voteButton">
+      Voting link coming soon
+    </button>
+<p class="small-note"></p>
+</section>
+</main>
+<footer class="footer">
+<p>Blyth for RHUL climbing soc president!</p>
+<div class="contact">
+<p>If you have any further questions please contact me:</p>
+<div class="social-links">
+<a aria-label="Chat on WhatsApp" href="https://wa.me/qr/CNUPQ5U5GO3KL1">
+<img alt="Chat on WhatsApp" src="https://vote.blyth.middleton.uk.net/img/Digital_Glyph_Green_RGB_2026.svg"/>
+</a>
+<a aria-label="Chat on Signal" href="https://signal.me/#eu/0PR98zPxEWRHaJGYDog3yzlkRdIHcmWiJZRjUalomWbMGij2gL1B_4OnBmhlZ_eo">
+<img alt="Chat on Signal" src="https://vote.blyth.middleton.uk.net/img/Signal-Logo-Ultramarine.svg"/>
+</a>
+</div>
+</div>
+
+<a href="#top">Back to top ↑</a>
+</footer>
+
+</body>
+</html>
